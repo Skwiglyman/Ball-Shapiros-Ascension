@@ -127,23 +127,23 @@ class Level:
 
     def loadTime(self):
         try:
-            with open('timeData.txt', 'x') as f:
+            with open('./GolfTower/timeData.txt', 'x') as f:
                 self.time = 0
                 f.close()
         except:
-            with open('timeData.txt') as f:
+            with open('./GolfTower/timeData.txt') as f:
                 data = f.readlines()
                 self.time = float(data[0])
                 f.close()
 
     def saveTime(self):
-        with open('timeData.txt', 'w') as f:
+        with open('./GolfTower/timeData.txt', 'w') as f:
             f.write(str(self.time) + "\n")
             f.close()
     
     def loadPlayer(self):
         try:
-            with open('playerData.txt') as f:
+            with open('./GolfTower/playerData.txt') as f:
                 data = f.readlines()
                 self.player = Player(float(data[0]), float(data[1]), self.sprites, float(data[2]), float(data[3]))
                 f.close()
@@ -163,8 +163,8 @@ class Level:
                 if button.rect.collidepoint(mousePos) and pygame.mouse.get_pressed()[0]:
                     self.time = 0
                     del self.player
-                    os.remove("playerData.txt")
-                    os.remove("timeData.txt")
+                    os.remove("./GolfTower/playerData.txt")
+                    os.remove("./GolfTower/timeData.txt")
                     self.sprites = {}
                     self.backgroundColour = BACKGROUND_COL
 
