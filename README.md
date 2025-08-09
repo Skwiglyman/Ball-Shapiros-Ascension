@@ -1,6 +1,6 @@
 # Ball Shapiro's Ascension
 
-A Python-based 2D platformer game built with Pygame.
+A Python-based 2D platformer game built with Pygame. This is a game I made for my Introduction to computer science final project in grade 10, please forgive if its janky.
 
 ## Description
 
